@@ -19,7 +19,9 @@ const managerConfig = {
   },
   onLoaded({manager, editor, challengeId, data}) {},
   onChange({manager, editor, challengeId, data}) {
-    testcaseCM.setValue(data.files.testcases);
+    if (testcaseCM.isClean()) {
+      testcaseCM.setValue(data.files.testcases);
+    }
   },
   onRun({manager, editor, challengeId, data}) {}
 };
@@ -83,8 +85,13 @@ else {
   firepadRef = firepadRef.push();
   location += "#" + firepadRef.key;
   managerConfig.onChange = ({manager, editor, challengeId, data}) => {
-    codeCM.setValue(data.files.code);
-    testcaseCM.setValue(data.files.testcases);
+    if (codeCM.isClean()) {
+      codeCM.setValue(data.files.code);
+    }
+
+    if (testcaseCM.isClean()) {
+      testcaseCM.setValue(data.files.testcases);
+    }
   };
 }
 
