@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Embedded + CodeMirror Demo</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/dialog/dialog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/theme/abcdef.css">
+  <script src="//www.qualified.io/embed.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/dialog/dialog.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/search/searchcursor.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/python/python.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/edit/matchbrackets.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/keymap/vim.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/show-hint.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/css-hint.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/python.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h2>Embeded CodeMirror Demo</h2>
+  <p>
+    This is a minimal demonstration of using a custom editor like CodeMirror alongside Embed.
+  </p>
+  <p>
+    <a href="..">Return to all demos</a>
+  </p>
+  <div id="challenge-wrapper">
+    <div id="editor-container">
+      <div id="code-editor">
+        <textarea id="code-code-mirror"></textarea>
+      </div>
+      <div id="testcase-editor">
+        <textarea id="testcase-code-mirror"></textarea>
+      </div>
+    </div>
+    <div id="qualified-embed"></div>
+  </div>
+</body>
+</html>
+
