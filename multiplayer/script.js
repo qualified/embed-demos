@@ -102,6 +102,9 @@ else {
   location += "#" + firepadRef.key;
 }
 
+const anchor = document.createElement("a");
+anchor.textContent = anchor.href = location;
+document.querySelector("#firebase-loc").appendChild(anchor);
 const firepad = Firepad.fromCodeMirror(firepadRef, codeCM);
   
 })();
