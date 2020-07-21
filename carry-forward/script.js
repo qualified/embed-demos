@@ -66,6 +66,7 @@ def valid_installation(sequence, package, dependencies):
       nextChallengeBtn.disabled = true;
       const nextIdx = (1 + challengeIds.indexOf(challengeId)) % challengeIds.length;
       editor.update({challengeId: challengeIds[nextIdx]});
+      editorConfig.challengeId = challengeIds[nextIdx];
       initialFiles.code = candidateCode + 
         (presetCodeForChallenge[challengeIds[nextIdx]] || "");
       getSolnBtn.removeEventListener("click", getSolnHandler);
