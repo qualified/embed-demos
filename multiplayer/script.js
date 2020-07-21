@@ -19,6 +19,7 @@ const managerConfig = {
   },
   onLoaded({manager, editor, challengeId, data}) {},
   onChange({manager, editor, challengeId, data}) {
+    testcaseCM.setValue(data.files.testcases);
   },
   onRun({manager, editor, challengeId, data}) {}
 };
