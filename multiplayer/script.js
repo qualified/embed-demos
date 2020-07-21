@@ -19,19 +19,9 @@ const managerConfig = {
   },
   onLoaded({manager, editor, challengeId, data}) {},
   onChange({manager, editor, challengeId, data}) {
-    if (codeCM.isClean() && codeCM.getValue() === "") {
-      codeCM.setValue(data.files.code);
-    }
-
-    if (testcaseCM.isClean() && testcaseCM.getValue() === "") {
-      testcaseCM.setValue(data.files.testcases);
-    }
   },
   onRun({manager, editor, challengeId, data}) {}
 };
-
-const context = {manager: QualifiedEmbed.init(managerConfig)};
-context.editor = context.manager.createEditor(editorConfig);
 
 const makeCodeMirror = textarea => {
   const cm = CodeMirror.fromTextArea(textarea, {
@@ -72,15 +62,6 @@ const makeCodeMirror = textarea => {
   return cm;
 };
 
-const codeCM = makeCodeMirror(document.querySelector("#code-code-mirror"));
-codeCM.on("keyup", (cm, event) => {
-  context.editor.setFileContents({code: cm.getValue()});
-});
-const testcaseCM = makeCodeMirror(document.querySelector("#testcase-code-mirror"));
-testcaseCM.on("keyup", (cm, event) => {
-  context.editor.setFileContents({testcases: cm.getValue()});
-});
-
 const firebaseConfig = {
   apiKey: "AIzaSyBlh9MSemgD3GfF0gV1mzw6ptbwl7vZTs4",
   authDomain: "firepad-3e39a.firebaseapp.com",
@@ -100,12 +81,27 @@ if (hash) {
 else {
   firepadRef = firepadRef.push();
   location += "#" + firepadRef.key;
+  managerConfig.onChange = ({manager, editor, challengeId, data}) => {
+    codeCM.setValue(data.files.code);
+    testcaseCM.setValue(data.files.testcases);
+  };
 }
 
 const anchor = document.createElement("a");
 anchor.textContent = anchor.href = location;
 document.querySelector("#firebase-loc").appendChild(anchor);
+const codeCM = makeCodeMirror(document.querySelector("#code-code-mirror"));
 const firepad = Firepad.fromCodeMirror(firepadRef, codeCM);
-  
+const context = {manager: QualifiedEmbed.init(managerConfig)};
+context.editor = context.manager.createEditor(editorConfig);
+codeCM.on("keyup", (cm, event) => {
+  context.editor.setFileContents({code: cm.getValue()});
+});
+const testcaseCM = makeCodeMirror(document.querySelector("#testcase-code-mirror"));
+testcaseCM.on("keyup", (cm, event) => {
+  context.editor.setFileContents({testcases: cm.getValue()});
+});
+
+
 })();
 
