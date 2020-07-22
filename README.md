@@ -1,7 +1,7 @@
 # embed-demos
-A collection of proofs-of-concept for Qualified's Embed feature. See [API documentation](https://www.qualified.io/embed/api-docs/) for help.
+A collection of proofs-of-concept for Qualified's [Embed](https://www.qualified.io/embedded) feature. See [API documentation](https://www.qualified.io/embed/api-docs/) for help.
 
-[Try the demos live](https://qualifiedio.github.io/embed-demos).
+[Try the demos live](https://qualifiedio.github.io/embed-demos) and [visit the repository on GitHub](https://www.github.com/qualifiedio/embed-demos).
 
 If you want to run the demos locally, start a development server, for example `python3 -m http.server 8000`, then point your browser to the `localhost:8000` address.
 

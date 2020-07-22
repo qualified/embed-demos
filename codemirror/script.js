@@ -10,12 +10,12 @@ const managerConfig = {
   options: {
     embedClientKey: "g39RsSfAYEkyRG8ZYjxrpT9c/XqnfQpN",
     language: "python",
-    hideTabs: "code,idesettings", // TODO "code,idesettings,testcases"
+    hideTabs: "code,idesettings,testcases",
     theme: "dark",
     autoStart: false,
     initialFiles: {},
     initialLayout: {
-      topLeft: ["instructions", "runnerframe", "testcases"], // TODO remove testcases
+      topLeft: ["instructions", "runnerframe"],
     },
   },
   onLoaded({manager, editor, challengeId, data}) {
@@ -40,7 +40,6 @@ const makeCodeMirror = textarea => {
     lineNumbers: true,
     mode: "python",
     version: 3,
-    keyMap: "vim",
     tabSize: 4,
     indentWithTabs: false,
     lineWrapping: false,
@@ -49,7 +48,6 @@ const makeCodeMirror = textarea => {
     theme: "abcdef",
     extraKeys: {"Ctrl-Space": "autocomplete"},
   });
-  //cm.setSize(null, "100%");
   
   cm.addKeyMap({
     Tab: cm => {

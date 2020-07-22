@@ -9,12 +9,12 @@ const managerConfig = {
   options: {
     embedClientKey: "g39RsSfAYEkyRG8ZYjxrpT9c/XqnfQpN",
     language: "c",
-    hideTabs: "code,idesettings", // TODO "code,idesettings,testcases"
+    hideTabs: "code,idesettings,testcases",
     theme: "light",
     autoStart: false,
     initialFiles: {},
     initialLayout: {
-      topLeft: ["instructions", "runnerframe", "testcases"], // TODO remove testcases
+      topLeft: ["instructions", "runnerframe"], 
     },
   },
   onLoaded({manager, editor, challengeId, data}) {},
@@ -31,7 +31,6 @@ const makeCodeMirror = textarea => {
     lineNumbers: true,
     mode: "text/x-csrc",
     version: 3,
-    keyMap: "vim",
     tabSize: 4,
     indentWithTabs: false,
     lineWrapping: false,
@@ -109,7 +108,6 @@ const testcaseCM = makeCodeMirror(document.querySelector("#testcase-code-mirror"
 testcaseCM.on("keyup", (cm, event) => {
   context.editor.setFileContents({testcases: cm.getValue()});
 });
-
 
 })();
 
