@@ -3,7 +3,7 @@ A collection of proofs-of-concept for Qualified's [Embed](https://www.qualified.
 
 [Try the demos live](https://qualified.github.io/embed-demos) and [visit the repository on GitHub](https://www.github.com/qualified/embed-demos).
 
-If you want to run the demos locally, start a development server, for example `python3 -m http.server 8000`, then point your browser to the `localhost:8000` address.
+If you want to run the demos locally, start a development server, for example `python3 -m http.server 8000`, then point your browser to the [localhost:8000](localhost:8000) address.
 
 ## Demos
 
@@ -29,4 +29,7 @@ If you'd like the new challenge to begin with the candidate's last-completed sou
 
 ### [Multiplayer](multiplayer)
 Expanding on the [CodeMirror demo](codemirror), you can use [Firepad](https://firepad.io) or another service to enable multiple editors. This enables students, instructors, candidates and reviewers to collaborate from different computers in real time. There are many rabbit holes available to go down with multiplayer editing which can cover a wide range of use cases, so this is a bare-minimum "hello world" example.
+
+### [Challenge Chooser](challenge-chooser)
+Oftentimes, letting the student or candidate pick from a variety of challenges is useful. For example, when assessing framework-agnostic front-end development skills, it may be appropriate to let challengers work in one of multiple frameworks. At the time of writing, Qualified's [project code challenge feature](https://www.qualified.io/kb/hire/challenges/multi-file-code) doesn't offer more than a single environment per challenge, but Embed can.
 
