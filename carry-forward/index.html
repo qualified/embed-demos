@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <meta content="utf-8" http-equiv="encoding">
-  <title>Embedded Challenge Demo</title>
+  <meta charset="utf-8">
+  <title>Embedded Carry-Forward Demo</title>
+  <link rel="stylesheet" href="../_common/shared-styles.css">
   <link rel="stylesheet" href="style.css">
   <script src="//www.qualified.io/embed.js"></script>
   <script src="solutions.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
+<header>
+  <h1><span>Qualified</span></h1>
   <h2>Embedded Carry-Forward Demo</h2>
-  <p>
-    This is a minimal demonstration of how you can carry the 
+  <a href="..">Return to all demos</a>
+</header>
+<main>
+  <p class="description">
+    This is a minimal demonstration of how you can carry the
     candidate's solution code forward to the next challenge.
   </p>
-  <p>
-    <a href="..">Return to all demos</a>
-  </p>
   <div id="qualified-embed"></div>
-  <button id="get-solution">I give up--give me the solution code!</button>
-  <button id="next-challenge" disabled>next challenge</button>
+  <div class="nav-buttons">
+    <button id="get-solution" class="button">I give up—give me the solution code!</button>
+    <button id="next-challenge" class="button" disabled>Next Challenge ➤</button>
+  </div>
+</main>
 </body>
 </html>
 
