@@ -33,3 +33,5 @@ Expanding on the [CodeMirror demo](codemirror), you can use [Firepad](https://fi
 ### [Challenge Chooser](challenge-chooser)
 Oftentimes, letting the student or candidate pick from a variety of challenges is useful. For example, when assessing framework-agnostic front-end development skills, it may be appropriate to let challengers work in one of multiple frameworks. At the time of writing, Qualified's [project code challenge feature](https://www.qualified.io/kb/hire/challenges/multi-file-code) doesn't offer more than a single environment per challenge, but Embed can.
 
+### [Progress Meter](progress)
+Sometimes it's nice to let students move between different coding tests at their own pace. In this demo, we track the candidate's progress across several embeds, and then let them know when they've completed everything.
