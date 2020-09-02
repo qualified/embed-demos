@@ -1,0 +1,6 @@
+# IntelliJ
+.idea
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr

@@ -1,17 +1,9 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: helvetica, arial, sans-serif;
-  margin: 1em;
-}
-
 #qualified-embed {
   position: relative;
   height: 60vh;
   width: 100%;
   max-width: 80em;
+  margin: 0 auto;
 }
 
 #qualified-embed iframe {
@@ -19,5 +11,10 @@ body {
   height: 60vh;
   max-width: 80em;
   border: none;
+}
+
+.nav-buttons {
+  text-align: center;
+  margin-top: 20px;
 }
 

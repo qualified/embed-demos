@@ -8,7 +8,7 @@ const challengeIds = {
   vue: "5d5b4170eea25f14431748a2"
 };
 const editorConfig = {
-  node: challengeNode, 
+  node: challengeNode,
   challengeId: challengeIds.react
 };
 
@@ -37,6 +37,7 @@ const editor = manager.createEditor(editorConfig);
 
 for (const [framework, challengeId] of Object.entries(challengeIds)) {
   const anchor = document.createElement("a");
+  anchor.classList.add('button');
   frameworkBtnsContainer.appendChild(anchor);
   anchor.textContent = framework[0].toUpperCase() + framework.slice(1);
   anchor.href = "javascript:;";

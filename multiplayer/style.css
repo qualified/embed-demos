@@ -1,18 +1,10 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: helvetica, arial, sans-serif;
-  margin: 1em;
-}
-
 #challenge-wrapper {
   display: flex;
   flex-flow: row nowrap;
   flex: 1 1 0px;
   width: 100%;
   max-width: 90em;
+  margin: 0 auto;
 }
 
 #qualified-embed {
@@ -42,14 +34,6 @@ body {
 #testcase-editor {
   height: 20em;
 }
-
-.CodeMirror {
-  /*height: auto;*/
-}
-
-/*a.powered-by-firepad {
-  display: none;
-}*/
 
 @media (max-width: 1000px) {
   #challenge-wrapper {
