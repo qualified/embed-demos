@@ -25,6 +25,8 @@
 
   --link-color: var(--brand-primary-darker);
   --link-hover-color: var(--brand-primary-dark);
+
+  --border-color: #dae2e5;
 }
 
 *,
