@@ -19,6 +19,7 @@
   /* Text Colors */
   --body-bg: var(--brand-complement-bg);
   --text-color: var(--brand-complement-dark);
+  --text-muted: var(--brand-complement-medium);
 
   --text-code-bg: #fcfcfc;
   --text-code-color: #353536;
@@ -125,6 +126,7 @@ code {
   color: var(--text-code-color);
   background-color: var(--text-code-bg);
   border-radius: 3px;
+  border: 1px solid var(--border-color);
 }
 
 pre {
@@ -148,6 +150,7 @@ pre code {
   white-space: pre-wrap;
   background-color: transparent;
   border-radius: 0;
+  border: none;
 }
 
 header {
