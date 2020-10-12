@@ -1,0 +1,26 @@
+#blockly-container {
+  width: 700px;
+  height: 34em;
+}
+
+#challenge-wrapper {
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1100px;
+}
+
+#qualified-embed {
+  height: 34em;
+  width: 350px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+#qualified-embed iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+

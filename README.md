@@ -36,5 +36,9 @@ Oftentimes, letting the student or candidate pick from a variety of challenges i
 ### [Progress Meter](progress)
 Sometimes it's nice to let students move between different coding tests at their own pace. In this demo, we simulate a complete education course on a single page. This demo tracks the student's progress across several embeds, with a progress bar at the top of the page tracking their overall success. The student is free to solve the challenges in any order.
 
+### [Blockly](blockly)
+This is a demonstration of how you can use Embed with Google's <a href="https://developers.google.com/blockly">Blockly</a> to create captivating educational experiences.
+
 ### [Parson's Problem](parsons)
 This shows how you can use Embedded Qualified to set up an experimental challenge format like a code block scramble (Parson's problem).
+
