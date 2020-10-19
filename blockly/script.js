@@ -8,6 +8,14 @@ Blockly.Xml.domToWorkspace(
   blocklyWorkspace
 );
 
+// Convert text_print block to Node instead of browser
+Blockly.JavaScript["text_print"] = block => {
+  const msg = Blockly.JavaScript.valueToCode(
+    block, "TEXT", Blockly.JavaScript.ORDER_NONE
+  ) || "''";
+  return `console.log(${msg});\n`;
+};
+
 const editorConfig = {
   node: document.querySelector("#qualified-embed"), 
   challengeId: "5f029b271dbad30012978cd5",

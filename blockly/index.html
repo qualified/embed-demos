@@ -5,8 +5,7 @@
   <title>Embedded Blockly Demo</title>
   <link rel="stylesheet" href="../common/shared-styles.css">
   <link rel="stylesheet" href="style.css">
-  <!--<script src="//www.qualified.io/embed.js"></script>-->
-  <script src="https://www.qualified.io/embed.js"></script>
+  <script src="//www.qualified.io/embed.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/blockly/3.20200924.2/blockly.min.js" 
           integrity="sha512-0mL4wFg8lSxeT6Csm+Euhaln/QW5jtF+VDOgsSYuDnp8/6AQv3eFdz3b3YAQ6oc8fFGkOGmq+aU1iqR6HzzpTQ==" 
           crossorigin="anonymous"
@@ -192,7 +191,7 @@
     <block type="text_indexOf">
       <value name="VALUE">
         <block type="variables_get">
-          <field name="VAR">{textVariable}</field>
+          <field name="VAR">text</field>
         </block>
       </value>
       <value name="FIND">
@@ -204,14 +203,14 @@
     <block type="text_charAt">
       <value name="VALUE">
         <block type="variables_get">
-          <field name="VAR">{textVariable}</field>
+          <field name="VAR">text</field>
         </block>
       </value>
     </block>
     <block type="text_getSubstring">
       <value name="STRING">
         <block type="variables_get">
-          <field name="VAR">{textVariable}</field>
+          <field name="VAR">text</field>
         </block>
       </value>
     </block>
@@ -261,28 +260,28 @@
     <block type="lists_indexOf">
       <value name="VALUE">
         <block type="variables_get">
-          <field name="VAR">{listVariable}</field>
+          <field name="VAR">list</field>
         </block>
       </value>
     </block>
     <block type="lists_getIndex">
       <value name="VALUE">
         <block type="variables_get">
-          <field name="VAR">{listVariable}</field>
+          <field name="VAR">list</field>
         </block>
       </value>
     </block>
     <block type="lists_setIndex">
       <value name="LIST">
         <block type="variables_get">
-          <field name="VAR">{listVariable}</field>
+          <field name="VAR">list</field>
         </block>
       </value>
     </block>
     <block type="lists_getSublist">
       <value name="LIST">
         <block type="variables_get">
-          <field name="VAR">{listVariable}</field>
+          <field name="VAR">list</field>
         </block>
       </value>
     </block>
@@ -365,7 +364,7 @@
         </value>
         <value name="VALUE">
           <block type="text" id=",w#RfX9EJbs`~)ebG(b`">
-            <field name="TEXT">Hello FIXME</field>
+            <field name="TEXT">Hello there!</field>
           </block>
         </value>
       </block>
@@ -376,11 +375,6 @@
         <value name="ADD0">
           <block type="text" id="3q(aoYlbUoH{c%:oFnu}">
             <field name="TEXT">Hello, </field>
-          </block>
-        </value>
-        <value name="ADD1">
-          <block type="variables_get" id="s+HA[o]x8$k`:3gXBd(:">
-            <field name="VAR" id="jFqMDm,xa`2(8qr[.07G">name</field>
           </block>
         </value>
         <value name="ADD2">
