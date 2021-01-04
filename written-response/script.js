@@ -15,7 +15,7 @@ const managerConfig = {
     initialLayout: {
       topRight: ["instructions", "runnerframe"],
     },
-    hideTabs: ["webpreview"], // TODO maybe an issue -- challenge doesn't have WP 
+    hideTabs: ["webpreview"],
     //hideActions: ["attempt", "runTests"],
   },
   onLoaded({manager, editor, challengeId, data}) {
