@@ -42,3 +42,6 @@ This is a demonstration of how you can use Embed with Google's <a href="https://
 ### [Parson's Problem](parsons)
 This shows how you can use Embedded Qualified to set up an experimental challenge format like a code block scramble (Parson's problem).
 
+### [Written Response](written-response)
+Embed supports challenges that offer testable written response fields using markdown.
+
