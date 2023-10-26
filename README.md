@@ -46,4 +46,4 @@ This shows how you can use Embedded Qualified to set up an experimental challeng
 Embed supports challenges that offer testable written response fields using markdown.
 
 ### [Server Validation](server-validation)
-This demonstration illustrates how to run Embed on the server programmatically with the browser automation library Playwright. This allows you to securely run your candidate's code, validate solutions and persist the results on your server without using Qualified to manage assessments or assessment results.
+This demonstration illustrates how to run Embed on the server programmatically with the browser automation library [Playwright](https://playwright.dev/). This allows you to securely run your candidate's code, validate solutions and persist the results on your server without using Qualified to manage assessments or assessment results.
