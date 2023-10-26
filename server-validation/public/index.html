@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Qualified Embed Server Validation Demo</title>
+<meta name="description" content="Qualified Embed Server Validation Demo">
+<meta name="color-scheme" content="dark light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html {
+  height: 100%;
+}
+body, div, iframe {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+</style>
+</head>
+<body>
+<div id="qualified-embed"></div>
+<script src="https://www.qualified.io/embed.js"></script>
+<script>
+
+(() => {
+
+const attempt = code => {
+  return fetch("http://localhost:3003/submit", {
+    method: "POST",
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({fileContents: {code}}),
+  }).then(response => {
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+
+    return response.json();
+  });
+};
+
+const theme = window.matchMedia("(prefers-color-scheme: dark)")
+  .matches
+  ? "dark"
+  : "light";
+const manager = window.QualifiedEmbed.init({
+  options: {
+    embedClientKey: "g39RsSfAYEkyRG8ZYjxrpT9c/XqnfQpN",
+    language: "javascript",
+    initialLayout: {
+      topRight: ["instructions"],
+      bottomRight: ["runnerframe"],
+      bottomLeft: ["testcases"],
+    },
+    theme,
+  },
+  onRunStart({data}) {
+    if (data.type === "attempt") {
+      attempt(data.fileData.files.code)
+        .then(data => console.log(data))
+        .catch(err => console.error(err));
+    }
+  },
+});
+const editor = manager.createEditor({
+  node: document.querySelector("#qualified-embed"),
+  challengeId: "5f029b271dbad30012978cd5",
+});
+
+})();
+
+</script>
+</body>
+</html>
