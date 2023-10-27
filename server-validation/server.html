@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
+<title>Qualified Embed Server Validation Demo</title>
+<meta name="description" content="Qualified Embed Server Validation Demo">
+<meta name="color-scheme" content="dark light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ggorlen</title>
+<style>
+p {
+  width: 700px;
+}
+</style>
+</head>
 <body>
+  <h1>Qualified Embed Server Validation</h1>
+  <main>
+    <p>
+      This page is not visible to the client and is invoked programmatically by Playwright to validate the candidate's solution securely on the server.
+    </p>
+    <p>
+      <code>runEmbed</code> is the entry point, allowing your request handler to specify the configuration and candidate solution for a run.
+    </p>
+    <p>
+      Please see <a href="https://github.com/qualified/embed-demos/blob/master/server-validation/README.md">README.md</a> in the <a href="https://github.com/qualified/embed-demos/tree/master/server-validation">server-validation</a> directory for instructions on how to execute this script.
+    </p>
+  </main>
 <div id=qualified-embed></div>
 <script src="https://www.qualified.io/embed.js"></script>
 <script>
-
-// This script is not visible to the client and is invoked
-// programmatically by Playwright to validate the
-// candidate's solution securely on the server.
-//
-// runEmbed is the entry point, allowing your request
-// handler to specify the configuration and candidate
-// solution for a run.
 
 window.runEmbed = async ({
   fileContents,
