@@ -17,6 +17,10 @@ As as a proof of concept, this app is not completely production-ready out of the
 
 ## Usage
 
+This demo needs to be installed and run locally; the online Embed demos page doesn't have a back-end, so the HTML pages won't be particularly interesting on their own.
+
+You can get set up with the following commands:
+
 ```
 git clone https://github.com/qualified/embed-demos.git
 cd embed-demos/server-validation

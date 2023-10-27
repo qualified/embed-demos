@@ -16,7 +16,7 @@ const embedRunConfig = {
 
   // `code` is the solution to be provided by the
   // candidate, but you could also use dynamic test
-  // cases, ignoring the challengeId set above.
+  // cases (`testcases`), ignoring the challengeId set above.
   fileContents: {code: ""},
 };
 
