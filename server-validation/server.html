@@ -37,8 +37,10 @@ window.runEmbed = async ({
   const managerReady = new Promise(resolve => {
     const manager = window.QualifiedEmbed.init({
       options: embedOptions,
-      onLoaded() {
-        resolve({manager, editor});
+      onLoaded({data}) {
+        if (data.started) {
+          resolve({manager, editor});
+        }
       },
     });
     const editor = manager.createEditor({
