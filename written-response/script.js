@@ -15,8 +15,8 @@ const managerConfig = {
     initialLayout: {
       topRight: ["instructions", "runnerframe"],
     },
-    hideTabs: ["webpreview"],
-    //hideActions: ["attempt", "runTests"],
+    hideTabs: "webpreview",
+    //hideActions: "attempt"|"runTests",
   },
   onLoaded({manager, editor, challengeId, data}) {
   },
