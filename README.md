@@ -47,3 +47,6 @@ Embed supports challenges that offer testable written response fields using mark
 
 ### [Server Validation](server-validation)
 This demonstration illustrates how to run Embed on the server programmatically with the browser automation library [Playwright](https://playwright.dev/). This allows you to securely run your candidate's code, validate solutions and persist the results on your server without using Qualified to manage assessments or assessment results.
+
+### [React](react)
+This demo provides a basic starter for using Embed with React and Webpack. It should provide a good starting point for using Embed in a Node-based build.
