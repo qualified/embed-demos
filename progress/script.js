@@ -55,7 +55,7 @@
     },
   };
 
-  const manager = window.QualifiedEmbed.init(managerConfig);
+  const manager = window.QualifiedEmbed.QualifiedEmbedManager.init(managerConfig);
 
   function updateScore() {
     let total = 0;

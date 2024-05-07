@@ -56,7 +56,9 @@ def valid_installation(sequence, package, dependencies):
     context.editor.setFileContents({"code": solutions[editorConfig.challengeId]})
   ;
   getSolnBtn.addEventListener("click", getSolnHandler);
-  const context = {manager: window.QualifiedEmbed.init(managerConfig)};
+  const context = {
+    manager: window.QualifiedEmbed.QualifiedEmbedManager.init(managerConfig)
+  };
   context.editor = context.manager.createEditor(editorConfig);
   const nextChallenge = (editor, challengeId) => {
     nextChallengeBtn.disabled = false;

@@ -99,7 +99,9 @@ anchor.textContent = anchor.href = location;
 document.querySelector("#firebase-loc").appendChild(anchor);
 const codeCM = makeCodeMirror(document.querySelector("#code-code-mirror"));
 const firepad = Firepad.fromCodeMirror(firepadRef, codeCM);
-const context = {manager: QualifiedEmbed.init(managerConfig)};
+const context = {
+  manager: window.QualifiedEmbed.QualifiedEmbedManager.init(managerConfig)
+};
 context.editor = context.manager.createEditor(editorConfig);
 codeCM.on("keyup", (cm, event) => {
   context.editor.setFileContents({code: cm.getValue()});
