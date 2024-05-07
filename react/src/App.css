@@ -1,0 +1,10 @@
+.qualified-embed {
+  display: flex;
+  resize: both;
+  overflow: hidden;
+}
+.qualified-embed > iframe {
+  min-height: 450px;
+  border: none;
+  flex-grow: 1;
+}
