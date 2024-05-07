@@ -7,7 +7,7 @@ npm run build
 mv dist/index.html .
 # Manually edit the bundle links in index.html to point to dist/bundle.{js,css}
 git checkout dist
-git add -f .
+git add dist index.html
 git commit -m "Update the React demo"
 ```
 
