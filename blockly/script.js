@@ -47,7 +47,9 @@ const managerConfig = {
   }
 };
 
-const context = {manager: window.QualifiedEmbed.init(managerConfig)};
+const context = {
+  manager: window.QualifiedEmbed.QualifiedEmbedManager.init(managerConfig)
+};
 context.editor = context.manager.createEditor(editorConfig);
 
 const setEmbedEditorCodeFromBlockly = () => {

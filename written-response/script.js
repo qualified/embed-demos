@@ -26,7 +26,7 @@ const managerConfig = {
   }
 };
 
-const manager = window.QualifiedEmbed.init(managerConfig);
+const manager = window.QualifiedEmbed.QualifiedEmbedManager.init(managerConfig);
 const editor = manager.createEditor(editorConfig);
 
 })();
