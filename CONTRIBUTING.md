@@ -17,3 +17,5 @@ Once React works, run `npm run update-script-tags` to sync the `@qualified/embed
 Make sure to test all demos by hand before committing. Some package bumps involve breaking changes.
 
 The [server validation](server-validation) app will also need manual bumping and testing.
+
+Also make sure to update any readmes or descriptions that point to docs or mention parts of the API to align with the current version.

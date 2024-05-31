@@ -1,5 +1,5 @@
 # embed-demos
-A collection of proofs-of-concept for Qualified's [Embed](https://www.qualified.io/embedded) feature. See [API documentation](https://www.qualified.io/embed/api-docs/) for help.
+A collection of proofs-of-concept for Qualified's [Embed](https://www.qualified.io/embedded) feature. See [API documentation](https://andela-technology.github.io/qualified-embed/docs) for help.
 
 [Try the demos live](https://qualified.github.io/embed-demos) and [visit the repository on GitHub](https://www.github.com/qualified/embed-demos).
 
@@ -11,9 +11,9 @@ If you want to run the demos locally, start a development server, for example `p
 This is a demonstration of how you can use Embed with Google's <a href="https://developers.google.com/blockly">Blockly</a> to create captivating educational experiences.
 
 ### [Carry Forward](carry-forward)
-If you have a series of challenges, you can use the [manager's `onRun` callback](https://www.qualified.io/embed/api-docs/QualifiedEmbedManager.html#QualifiedEmbedManager__anchor) to determine when a challenge has been completed and move on to the next challenge using [`editor.update({challengeId: nextChallengeId})`](https://www.qualified.io/embed/api-docs/QualifiedEmbeddedEditor.html#update). 
+If you have a series of challenges, you can use the [manager's `onRun` callback](https://andela-technology.github.io/qualified-embed/docs/QualifiedEmbedManager.html) to determine when a challenge has been completed and move on to the next challenge using [`editor.update({challengeId: nextChallengeId})`](https://andela-technology.github.io/qualified-embed/docs/QualifiedEmbeddedChallenge.html#update).
 
-If you'd like the new challenge to begin with the candidate's last-completed source code, you can set [`initialFiles.code`](https://www.qualified.io/embed/api-docs/ChallengeOptions.html#initialFiles__anchor) (for classic code challaneges) or `initialFiles[path]` (for project code challenges) to the previous solution code (or any other code you wish to provide as a starting point for the next challenge).
+If you'd like the new challenge to begin with the candidate's last-completed source code, you can set [`initialFiles.code`](https://andela-technology.github.io/qualified-embed/docs/ChallengeOptions.html#initialFiles__anchor) (for classic code challaneges) or `initialFiles[path]` (for project code challenges) to the previous solution code (or any other code you wish to provide as a starting point for the next challenge).
 
 ### [Challenge Chooser](challenge-chooser)
 Oftentimes, letting the student or candidate pick from a variety of challenges is useful. For example, when assessing framework-agnostic front-end development skills, it may be appropriate to let challengers work in one of multiple frameworks. At the time of writing, Qualified's [project code challenge feature](https://www.qualified.io/kb/hire/challenges/multi-file-code) doesn't offer more than a single environment per challenge, but Embed can.
