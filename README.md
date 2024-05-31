@@ -16,7 +16,7 @@ If you have a series of challenges, you can use the [manager's `onRun` callback]
 If you'd like the new challenge to begin with the candidate's last-completed source code, you can set [`initialFiles.code`](https://andela-technology.github.io/qualified-embed/docs/ChallengeOptions.html#initialFiles__anchor) (for classic code challaneges) or `initialFiles[path]` (for project code challenges) to the previous solution code (or any other code you wish to provide as a starting point for the next challenge).
 
 ### [Challenge Chooser](challenge-chooser)
-Oftentimes, letting the student or candidate pick from a variety of challenges is useful. For example, when assessing framework-agnostic front-end development skills, it may be appropriate to let challengers work in one of multiple frameworks. At the time of writing, Qualified's [project code challenge feature](https://www.qualified.io/kb/hire/challenges/multi-file-code) doesn't offer more than a single environment per challenge, but Embed can.
+Oftentimes, letting the student or candidate pick from a variety of challenges is useful. For example, when assessing framework-agnostic front-end development skills, it may be appropriate to let challengers work in one of multiple frameworks. At the time of writing, Qualified's [project code challenge feature](https://docs.qualified.io/reference/features/challenges/multi-file-code/) doesn't offer more than a single environment per challenge, but Embed can.
 
 ### [CodeMirror](codemirror)
 Powerful browser-based code editors such as [CodeMirror](https://codemirror.net) and [Ace](https://ace.c9.io) can be used with Qualified Embed in place of the built-in CodeMirror editor in Embed's iframe.
