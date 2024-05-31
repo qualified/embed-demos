@@ -3,7 +3,7 @@ A collection of proofs-of-concept for Qualified's [Embed](https://www.qualified.
 
 [Try the demos live](https://qualified.github.io/embed-demos) and [visit the repository on GitHub](https://www.github.com/qualified/embed-demos).
 
-If you want to run the demos locally, start a development server, for example `python3 -m http.server 8000`, then point your browser to the [localhost:8000](http://localhost:8000) address. Most demos are static HTML files, but some require builds. See readme files within those demo directories.
+If you want to run the demos locally, start a development server, for example `python -m http.server 8000`, then point your browser to the [localhost:8000](http://localhost:8000) address. Most demos are static HTML files, but some require builds. See readme files within those demo directories.
 
 ## Demos
 
