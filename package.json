@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "update-script-tags": "node scripts/update-script-tags"
+  }
+}
