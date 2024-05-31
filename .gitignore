@@ -1,8 +1,1 @@
-# IntelliJ
-.idea
-*.iml
-modules.xml
-.idea/misc.xml
-*.ipr
-
 node_modules
