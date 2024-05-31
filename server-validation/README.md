@@ -2,9 +2,9 @@
 
 This demo app shows how you can run Qualified's [Embed](https://www.qualified.io/embedded) feature on a server, allowing you to validate candidate (or student) solutions securely and persist the results.
 
-Normally, Embed is run in a stateless [challenge](https://www.qualified.io/embed/api-docs/tutorial-challenges.html) mode. Solutions are sent to Qualified's Code Runner service which runs the test suite and responds directly to the client with the result. Since the Code Runner doesn't track the results, there's no way to trust that the result sent to the client hasn't been tampered with.
+Normally, Embed is run in a stateless [challenge](https://andela-technology.github.io/qualified-embed/docs/tutorial-challenges.html) mode. Solutions are sent to Qualified's Code Runner service which runs the test suite and responds directly to the client with the result. Since the Code Runner doesn't track the results, there's no way to trust that the result sent to the client hasn't been tampered with.
 
-Embed can also run in a stateful [assessment](https://www.qualified.io/embed/api-docs/tutorial-assessments.html) mode, eliminating the trust issue. Adding an auth token to the challenge mode is another way to save results securely. However, results must be stored on Qualified, and creating and managing assessments and invitations on Qualified may not fit all use cases.
+Embed can also run in a stateful [assessment](https://andela-technology.github.io/qualified-embed/docs/tutorial-assessments.html) mode, eliminating the trust issue. Adding an auth token to the challenge mode is another way to save results securely. However, results must be stored on Qualified, and creating and managing assessments and invitations on Qualified may not fit all use cases.
 
 This demo app uses a browser automation service, [Playwright](https://playwright.dev/), to run Embed on your server, effectively proxying requests to the Code Runner in a way that lets you record the results in a trustworthy manner, yet continue to use Embed's lightweight challenge mode. The only input from the candidate would typically be the solution code, which the candidate can test and develop before submission using a regular Embed instance such as the [index.html](public/index.html) in this project.
 
