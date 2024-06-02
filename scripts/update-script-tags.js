@@ -34,5 +34,5 @@ const findHtmlFiles = async (dir, newVersion) => {
 
 (async () => {
   const newVersion = await getQualifiedEmbedVersion();
-  await findHtmlFiles(path.resolve("."), newVersion);
+  await findHtmlFiles(path.resolve("demos"), newVersion);
 })().catch((err) => console.error(err));
