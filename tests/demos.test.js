@@ -1,13 +1,24 @@
 // @ts-check
 const fs = require("node:fs");
+const path = require("node:path");
 const { expect, test } = require("@playwright/test");
 
 const skipDirs = ["common", "server-validation"];
 const skipScriptCheck = ["react"];
-const scriptSelector = `script[src="https://cdn.jsdelivr.net/gh/andela-technology/qualified-embed@v1.0.1/dist/embed.min.js"]`;
+
+const json = fs.readFileSync(
+  path.join("demos", "react", "package.json"),
+  "utf-8",
+);
+const embedVersion = JSON.parse(json).dependencies["@qualified/embed"].replace(
+  /^\^/,
+  "",
+);
+
+const scriptSelector = `script[src="https://cdn.jsdelivr.net/gh/andela-technology/qualified-embed@v${embedVersion}/dist/embed.min.js"]`;
 
 const dirs = fs
-  .readdirSync("./demos", { withFileTypes: true })
+  .readdirSync("demos", { withFileTypes: true })
   .filter((e) => e.isDirectory())
   .map((e) => e.name)
   .filter((e) => !skipDirs.includes(e));
