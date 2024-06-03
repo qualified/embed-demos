@@ -14,7 +14,6 @@ Note that Playwright supports many popular languages, and other browser automati
 
 As as a proof of concept, this app is not completely production-ready out of the box, so adaptation to your specific needs is expected.
 
-
 ## Usage
 
 This demo needs to be installed and run locally; the online Embed demos page doesn't have a back-end, so the HTML pages won't be particularly interesting on their own.

@@ -1,47 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Embedded + CodeMirror Demo</title>
-  <link rel="stylesheet" href="../common/shared-styles.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/dialog/dialog.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/theme/abcdef.css">
-  <script src="https://cdn.jsdelivr.net/gh/andela-technology/qualified-embed@v1.0.1/dist/embed.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/dialog/dialog.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/search/searchcursor.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/python/python.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/edit/matchbrackets.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/show-hint.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/css-hint.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/python.js"></script>
-  <script src="script.js" defer></script>
-</head>
-<body>
-<header>
-  <h1><span>Qualified</span></h1>
-  <h2>Embedded + CodeMirror Demo</h2>
-  <a href="..">Return to all demos</a>
-</header>
-<main>
-  <p class="description">
-    This is a minimal demonstration of using a custom editor like CodeMirror alongside Embed.
-  </p>
-  <div id="challenge-wrapper">
-    <div id="editor-container">
-      <div id="code-editor">
-        <textarea id="code-code-mirror"></textarea>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded + CodeMirror Demo</title>
+    <link rel="stylesheet" href="../common/shared-styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/dialog/dialog.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/theme/abcdef.css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/andela-technology/qualified-embed@v1.0.1/dist/embed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/dialog/dialog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/search/searchcursor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/python/python.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/edit/matchbrackets.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/show-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/css-hint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/hint/python.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1><span>Qualified</span></h1>
+      <h2>Embedded + CodeMirror Demo</h2>
+      <a href="..">Return to all demos</a>
+    </header>
+    <main>
+      <p class="description">
+        This is a minimal demonstration of using a custom editor like CodeMirror
+        alongside Embed.
+      </p>
+      <div id="challenge-wrapper">
+        <div id="editor-container">
+          <div id="code-editor">
+            <textarea id="code-code-mirror"></textarea>
+          </div>
+          <div id="testcase-editor">
+            <textarea id="testcase-code-mirror"></textarea>
+          </div>
+        </div>
+        <div id="qualified-embed"></div>
       </div>
-      <div id="testcase-editor">
-        <textarea id="testcase-code-mirror"></textarea>
-      </div>
-    </div>
-    <div id="qualified-embed"></div>
-  </div>
-</main>
-</body>
+    </main>
+  </body>
 </html>
-

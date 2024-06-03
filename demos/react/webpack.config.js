@@ -10,14 +10,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         use: "babel-loader",
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.s?css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {loader: "css-loader"},
-        ],
+        use: [MiniCssExtractPlugin.loader, { loader: "css-loader" }],
       },
     ],
   },
@@ -25,7 +22,7 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   devServer: {
-    static: {directory: path.join(__dirname, "dist")},
+    static: { directory: path.join(__dirname, "dist") },
     compress: true,
     port: 5000,
     historyApiFallback: true,
@@ -38,7 +35,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: false,
       template: "./public/index.html",
-      filename: "./index.html"
+      filename: "./index.html",
     }),
     new MiniCssExtractPlugin({
       filename: "bundle.css",

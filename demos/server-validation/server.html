@@ -1,89 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Qualified Embed Server Validation Demo</title>
-<meta name="description" content="Qualified Embed Server Validation Demo">
-<meta name="color-scheme" content="dark light">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-p {
-  width: 700px;
-}
-</style>
-</head>
-<body>
-  <h1>Qualified Embed Server Validation</h1>
-  <main>
-    <p>
-      This page is not visible to the client and is invoked programmatically by Playwright to validate the candidate's solution securely on the server.
-    </p>
-    <p>
-      <code>runEmbed</code> is the entry point, allowing your request handler to specify the configuration and candidate solution for a run.
-    </p>
-    <p>
-      Please see <a href="https://github.com/qualified/embed-demos/blob/master/server-validation/README.md">README.md</a> in the <a href="https://github.com/qualified/embed-demos/tree/master/server-validation">server-validation</a> directory for instructions on how to execute this script.
-    </p>
-  </main>
-<div id=qualified-embed></div>
-<script src="https://cdn.jsdelivr.net/gh/andela-technology/qualified-embed@v1.0.1/dist/embed.min.js"></script>
-<script>
+  <head>
+    <meta charset="utf-8" />
+    <title>Qualified Embed Server Validation Demo</title>
+    <meta name="description" content="Qualified Embed Server Validation Demo" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      p {
+        width: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Qualified Embed Server Validation</h1>
+    <main>
+      <p>
+        This page is not visible to the client and is invoked programmatically
+        by Playwright to validate the candidate's solution securely on the
+        server.
+      </p>
+      <p>
+        <code>runEmbed</code> is the entry point, allowing your request handler
+        to specify the configuration and candidate solution for a run.
+      </p>
+      <p>
+        Please see
+        <a
+          href="https://github.com/qualified/embed-demos/blob/master/server-validation/README.md"
+          >README.md</a
+        >
+        in the
+        <a
+          href="https://github.com/qualified/embed-demos/tree/master/server-validation"
+          >server-validation</a
+        >
+        directory for instructions on how to execute this script.
+      </p>
+    </main>
+    <div id="qualified-embed"></div>
+    <script src="https://cdn.jsdelivr.net/gh/andela-technology/qualified-embed@v1.0.1/dist/embed.min.js"></script>
+    <script>
+      window.runEmbed = async ({
+        fileContents,
+        embedOptions,
+        editorConfig,
+      }) => {
+        const managerReady = new Promise((resolve) => {
+          const manager = window.QualifiedEmbed.QualifiedEmbedManager.init({
+            options: embedOptions,
+            onLoaded({ data }) {
+              if (data.started) {
+                resolve({ manager, editor });
+              }
+            },
+          });
+          const editor = manager.createEditor({
+            node: document.querySelector("#qualified-embed"),
+            ...editorConfig,
+          });
+        });
+        const { editor } = await managerReady;
+        await editor.setFileContents(fileContents);
 
-window.runEmbed = async ({
-  fileContents,
-  embedOptions,
-  editorConfig,
-}) => {
-  const managerReady = new Promise(resolve => {
-    const manager = window.QualifiedEmbed.QualifiedEmbedManager.init({
-      options: embedOptions,
-      onLoaded({data}) {
-        if (data.started) {
-          resolve({manager, editor});
+        // delay and retry to avoid Error: [RunnerFrame] Receipt Timed out
+        await new Promise((r) => setTimeout(r, 100));
+
+        for (let i = 0; i < 5; i++) {
+          try {
+            return await editor.attempt();
+          } catch (err) {}
         }
-      },
-    });
-    const editor = manager.createEditor({
-      node: document.querySelector("#qualified-embed"),
-      ...editorConfig,
-    });
-  });
-  const {editor} = await managerReady;
-  await editor.setFileContents(fileContents);
 
-  // delay and retry to avoid Error: [RunnerFrame] Receipt Timed out
-  await new Promise(r => setTimeout(r, 100));
+        throw Error("Unable to run code");
+      };
 
-  for (let i = 0; i < 5; i++) {
-    try {
-      return await editor.attempt();
-    } catch (err) {}
-  }
-
-  throw Error("Unable to run code");
-};
-
-const testRunEmbed = () => {
-  const code = `const sayHello = name =>
+      const testRunEmbed = () => {
+        const code = `const sayHello = name =>
     name ? \`Hello, \${name}!\` : "Hello there!";
   `;
-  
-  window
-    .runEmbed({
-      embedOptions: {
-        embedClientKey: "g39RsSfAYEkyRG8ZYjxrpT9c/XqnfQpN",
-        language: "javascript",
-      },
-      editorConfig: {
-        challengeId: "5f029b271dbad30012978cd5",
-      },
-      fileContents: {code},
-    })
-    .then(res => console.log(res))
-    .catch(err => console.error(err));
-};
-// testRunEmbed(); // optionally test runEmbed
 
-</script>
-</body>
+        window
+          .runEmbed({
+            embedOptions: {
+              embedClientKey: "g39RsSfAYEkyRG8ZYjxrpT9c/XqnfQpN",
+              language: "javascript",
+            },
+            editorConfig: {
+              challengeId: "5f029b271dbad30012978cd5",
+            },
+            fileContents: { code },
+          })
+          .then((res) => console.log(res))
+          .catch((err) => console.error(err));
+      };
+      // testRunEmbed(); // optionally test runEmbed
+    </script>
+  </body>
 </html>

@@ -72,4 +72,3 @@ def valid_installation(sequence, package, dependencies):
     ref = installable(package, dependencies)
     return set(ref).issubset(set(sequence))`,
 };
-
