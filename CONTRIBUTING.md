@@ -8,6 +8,12 @@ Most of the repo consists of static, no-build HTML files. You can use any develo
 
 Some demos ([React](react) and [server validation](server-validation)) have builds. View their specific readme files to learn about their specific development workflows.
 
+You can ignore formatting commits in git blame by running
+
+```
+git config blame.ignoreRevsFile .git-blame-ignore-revs
+```
+
 ## Tests
 
 We have Playwright tests that run in CI and spot-check each demo and ensure all versions are the same.

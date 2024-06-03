@@ -1,0 +1,17 @@
+# Comments stolen from https://github.com/paritytech/substrate/blob/master/.git-blame-ignore-revs
+# GitHub supports this file to exclude these commits from the blame view.
+#
+# You can easily exclude big automated code changes by running
+#
+#     git config blame.ignoreRevsFile .git-blame-ignore-revs
+#
+# in your local repository. It will work also in IDE integrations.
+#
+# On versions of Git 2.20 and later comments (#), empty lines, and any leading and
+# trailing whitespace is ignored. Everything but a SHA-1 per line will error out on
+# older versions.
+#
+# You should add new commit hashes to this file when you create or find such big
+# automated refactorings while reading code history. If you only know the short hash,
+# use `git rev-parse 1d5abf01` to expand it to the full SHA1 hash needed in this file.
+e249dd0f0fe9f2bda0b4dad62bc281f7f09f9d36 # Autoformat with standardrb
