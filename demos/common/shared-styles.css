@@ -2,19 +2,19 @@
 
 :root {
   /* Primary Brand Colors */
-  --brand-primary: #6ABE79;
-  --brand-primary-dark: #4BB05D;
+  --brand-primary: #6abe79;
+  --brand-primary-dark: #4bb05d;
   --brand-primary-darker: #448844;
-  --brand-complement: #28A27A;
-  --brand-complement-bg: #F2F6F7;
-  --brand-complement-medium: #535F72;
-  --brand-complement-dark: #262F34;
+  --brand-complement: #28a27a;
+  --brand-complement-bg: #f2f6f7;
+  --brand-complement-medium: #535f72;
+  --brand-complement-dark: #262f34;
 
   /* Alert Colors */
-  --brand-info: #498DB1;
+  --brand-info: #498db1;
   --brand-success: var(--brand-primary-dark);
-  --brand-warning: #EEB854;
-  --brand-danger: #B63D4C;
+  --brand-warning: #eeb854;
+  --brand-danger: #b63d4c;
 
   /* Text Colors */
   --body-bg: var(--brand-complement-bg);
@@ -75,8 +75,8 @@ a:focus {
   border: 1px solid var(--link-color);
   border-radius: 2px;
   min-width: 10em;
-  transition: all .2s ease-in-out;
-  background-color: #FFF;
+  transition: all 0.2s ease-in-out;
+  background-color: #fff;
   color: var(--link-color);
   line-height: inherit;
   font-size: inherit;
@@ -84,7 +84,7 @@ a:focus {
 .button:not([disabled]):hover,
 .button:not([disabled]):focus {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   background: var(--link-hover-color);
   border-color: var(--link-hover-color);
   cursor: pointer;
@@ -154,8 +154,13 @@ pre code {
 }
 
 header {
-  background: var(--brand-primary-dark) linear-gradient(to bottom right, var(--brand-complement), var(--brand-primary-dark));
-  color: #FFF;
+  background: var(--brand-primary-dark)
+    linear-gradient(
+      to bottom right,
+      var(--brand-complement),
+      var(--brand-primary-dark)
+    );
+  color: #fff;
   padding: 10px 20px;
 }
 
@@ -188,22 +193,22 @@ header h2 {
 
 header a {
   flex: 0 1 auto;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
 }
 
 header a::before {
   display: inline-block;
-  content: '⬅︎';
-  opacity: .6;
+  content: "⬅︎";
+  opacity: 0.6;
   text-decoration: none;
-  margin-right: .5em;
-  transition: all .2s ease-in-out;
+  margin-right: 0.5em;
+  transition: all 0.2s ease-in-out;
 }
 
 header a:hover,
 header a:focus {
-  color: #FFF;
+  color: #fff;
   text-decoration: underline;
 }
 

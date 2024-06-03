@@ -1,56 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Embedded Multiplayer Demo</title>
-  <link rel="stylesheet" href="../common/shared-styles.css">
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded Multiplayer Demo</title>
+    <link rel="stylesheet" href="../common/shared-styles.css" />
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
 
-  <!-- Qualified Embed -->
-  <script src="https://cdn.jsdelivr.net/gh/andela-technology/qualified-embed@v1.0.1/dist/embed.min.js"></script>
+    <!-- Qualified Embed -->
+    <script src="https://cdn.jsdelivr.net/gh/andela-technology/qualified-embed@v1.0.1/dist/embed.min.js"></script>
 
-  <!-- CodeMirror -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/dialog/dialog.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/dialog/dialog.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/search/searchcursor.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/clike/clike.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/edit/matchbrackets.js"></script>
+    <!-- CodeMirror -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/dialog/dialog.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/dialog/dialog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/search/searchcursor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/clike/clike.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/edit/matchbrackets.js"></script>
 
-  <!-- Firepad -->
-  <link rel="stylesheet" href="https://firepad.io/releases/v1.5.9/firepad.css" />
-  <script src="https://firepad.io/releases/v1.5.9/firepad.min.js"></script>
+    <!-- Firepad -->
+    <link
+      rel="stylesheet"
+      href="https://firepad.io/releases/v1.5.9/firepad.css"
+    />
+    <script src="https://firepad.io/releases/v1.5.9/firepad.min.js"></script>
 
-  <script src="script.js" defer></script>
-</head>
-<body>
-<header>
-  <h1><span>Qualified</span></h1>
-  <h2>Embedded Multiplayer Demo</h2>
-  <a href="..">Return to all demos</a>
-</header>
-<main>
-  <p class="description">
-    A simple demo of multiplayer editing (code textarea only) using <a href="https://firepad.io">Firepad</a>. A fresh page load generates a unique id which can then be accessed by additional clients to collaborate on the same code. The URL for this code is <span id="firebase-loc"></span>.
-  </p>
-  <div id="challenge-wrapper">
-    <div id="editor-container">
-      <div id="code-editor">
-        <textarea id="code-code-mirror"></textarea>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1><span>Qualified</span></h1>
+      <h2>Embedded Multiplayer Demo</h2>
+      <a href="..">Return to all demos</a>
+    </header>
+    <main>
+      <p class="description">
+        A simple demo of multiplayer editing (code textarea only) using
+        <a href="https://firepad.io">Firepad</a>. A fresh page load generates a
+        unique id which can then be accessed by additional clients to
+        collaborate on the same code. The URL for this code is
+        <span id="firebase-loc"></span>.
+      </p>
+      <div id="challenge-wrapper">
+        <div id="editor-container">
+          <div id="code-editor">
+            <textarea id="code-code-mirror"></textarea>
+          </div>
+          <div id="testcase-editor">
+            <textarea id="testcase-code-mirror"></textarea>
+          </div>
+        </div>
+        <div id="qualified-embed"></div>
       </div>
-      <div id="testcase-editor">
-        <textarea id="testcase-code-mirror"></textarea>
-      </div>
-    </div>
-    <div id="qualified-embed"></div>
-  </div>
-</main>
-</body>
+    </main>
+  </body>
 </html>
-

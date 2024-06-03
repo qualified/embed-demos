@@ -1,6 +1,6 @@
 const express = require("express");
-const {readFile} = require("node:fs/promises");
-const {chromium} = require("playwright");
+const { readFile } = require("node:fs/promises");
+const { chromium } = require("playwright");
 
 // Primary Embed configuration options are set here.
 // This could be dynamic, but for purposes of
@@ -17,11 +17,11 @@ const embedRunConfig = {
   // `code` is the solution to be provided by the
   // candidate, but you could also use dynamic test
   // cases (`testcases`), ignoring the challengeId set above.
-  fileContents: {code: ""},
+  fileContents: { code: "" },
 };
 
 (async () => {
-  const browser = await chromium.launch({headless: true});
+  const browser = await chromium.launch({ headless: true });
   const embedHTML = await readFile("server.html", {
     encoding: "ascii",
   });
@@ -32,7 +32,7 @@ const embedRunConfig = {
     .use(express.static("public"))
     .use(express.json())
     .post("/submit", async (req, res) => {
-      const {fileContents} = req.body;
+      const { fileContents } = req.body;
 
       if (!fileContents || typeof fileContents !== "object") {
         return res.status(422).json({
@@ -45,23 +45,22 @@ const embedRunConfig = {
         page = await browser.newPage();
         await page.setContent(embedHTML);
         const result = await page.evaluate(
-          embedRunConfig => window.runEmbed(embedRunConfig),
-          {...embedRunConfig, fileContents}
+          (embedRunConfig) => window.runEmbed(embedRunConfig),
+          { ...embedRunConfig, fileContents },
         );
 
         // At this point, generally store the result
         // in a database rather than returning it verbatim
         // to the client. But for purposes of demonstration,
         // pass the response along.
-        return res.json({result});
+        return res.json({ result });
       } catch (err) {
-        return res.status(500).json({error: err.message});
+        return res.status(500).json({ error: err.message });
       } finally {
         await page?.close();
       }
     })
     .listen(app.get("port"), () =>
-      console.log(`running on port ${app.get("port")}`)
+      console.log(`running on port ${app.get("port")}`),
     );
-})().catch(err => console.error(err));
-
+})().catch((err) => console.error(err));

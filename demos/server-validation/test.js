@@ -9,17 +9,17 @@ const code = `const sayHello = name =>
 fetch("http://localhost:3003/submit", {
   method: "POST",
   headers: {
-    "Accept": "application/json",
-    "Content-Type": "application/json"
+    Accept: "application/json",
+    "Content-Type": "application/json",
   },
-  body: JSON.stringify({fileContents: {code}}),
+  body: JSON.stringify({ fileContents: { code } }),
 })
-  .then(response => {
+  .then((response) => {
     if (!response.ok) {
       throw Error(response.statusText);
     }
 
     return response.json();
   })
-  .then(data => console.log(data))
-  .catch(err => console.error(err));
+  .then((data) => console.log(data))
+  .catch((err) => console.error(err));

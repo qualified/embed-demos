@@ -26,7 +26,7 @@ A minimal connection between an external editor and Qualified Embed involves ext
 
 ```javascript
 codeMirrorEditor.on("keyup", (cm, event) => {
-  qEmbedEditor.setFileContents({code: cm.getValue()});
+  qEmbedEditor.setFileContents({ code: cm.getValue() });
 });
 ```
 
