@@ -1,5 +1,12 @@
 {
   "scripts": {
+    "start": "python -m http.server -d demos 8000",
+    "quiet-server": "python -m http.server -d demos 8000 > /dev/null 2>&1",
+    "test": "playwright test",
     "update-script-tags": "node scripts/update-script-tags"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.0"
   }
 }
