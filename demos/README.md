@@ -2,7 +2,7 @@
 
 See the [main page](..) for details.
 
-If you want to run the demos locally, start a development server, for example `python -m http.server 8000`, then point your browser to the [localhost:8000](http://localhost:8000) address. Most demos are static HTML files, but some require builds. See readme files within those demo directories.
+If you want to run the demos locally, start a [development server](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server), for example `python -m http.server 8000`, then point your browser to the [localhost:8000](http://localhost:8000) address. Most demos are static HTML files, but some require builds. See readme files within those demo directories for specific instructions.
 
 ## [Blockly](blockly)
 

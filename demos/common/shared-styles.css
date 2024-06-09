@@ -2,19 +2,19 @@
 
 :root {
   /* Primary Brand Colors */
-  --brand-primary: #6abe79;
-  --brand-primary-dark: #4bb05d;
-  --brand-primary-darker: #448844;
-  --brand-complement: #28a27a;
+  --brand-primary: #338632;
+  --brand-primary-dark: #245a23;
+  --brand-primary-darker: #163a16;
+  --brand-complement: #307c84;
   --brand-complement-bg: #f2f6f7;
-  --brand-complement-medium: #535f72;
-  --brand-complement-dark: #262f34;
+  --brand-complement-medium: #455d5f;
+  --brand-complement-dark: #212c2d;
 
   /* Alert Colors */
-  --brand-info: #498db1;
+  --brand-info: #005f87;
   --brand-success: var(--brand-primary-dark);
-  --brand-warning: #eeb854;
-  --brand-danger: #b63d4c;
+  --brand-warning: #8b6800;
+  --brand-danger: #cb3b43;
 
   /* Text Colors */
   --body-bg: var(--brand-complement-bg);
@@ -27,7 +27,7 @@
   --link-color: var(--brand-primary-darker);
   --link-hover-color: var(--brand-primary-dark);
 
-  --border-color: #dae2e5;
+  --border-color: #e7e9ea;
 }
 
 *,
