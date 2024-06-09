@@ -44,5 +44,11 @@ for (const dir of dirs) {
       const response = await responsePromise;
       expect(response.status()).toBe(200);
     });
+
+    test("has link to source code", async ({ page }) => {
+      const a = page.getByRole("link", { name: "this demo's source" });
+      const source = new RegExp(`/github.*/embed-demos/.*/${dir}$`);
+      await expect(a).toHaveAttribute("href", source);
+    });
   });
 }
