@@ -4,7 +4,6 @@
   /* Primary Brand Colors */
   --brand-primary: #338632;
   --brand-primary-dark: #245a23;
-  --brand-primary-darker: #163a16;
   --brand-complement: #307c84;
   --brand-complement-bg: #f2f6f7;
   --brand-complement-medium: #455d5f;
@@ -24,7 +23,7 @@
   --text-code-bg: #fcfcfc;
   --text-code-color: #353536;
 
-  --link-color: var(--brand-primary-darker);
+  --link-color: var(--brand-primary);
   --link-hover-color: var(--brand-primary-dark);
 
   --border-color: #e7e9ea;
