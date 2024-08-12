@@ -15,7 +15,7 @@ const embedVersion = JSON.parse(json).dependencies["@qualified/embed"].replace(
   "",
 );
 
-const scriptSelector = `script[src="https://cdn.jsdelivr.net/gh/andela-technology/qualified-embed@v${embedVersion}/dist/embed.min.js"]`;
+const scriptSelector = `script[src="https://cdn.jsdelivr.net/npm/@qualified/embed@v${embedVersion}"]`;
 
 const dirs = fs
   .readdirSync("demos", { withFileTypes: true })
