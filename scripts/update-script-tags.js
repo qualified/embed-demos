@@ -2,15 +2,15 @@ const fs = require("node:fs/promises");
 const path = require("path");
 
 const getQualifiedEmbedVersion = async () => {
-  const packageJsonPath = path.resolve("react", "package.json");
+  const packageJsonPath = path.resolve("demos", "react", "package.json");
   const data = await fs.readFile(packageJsonPath, "utf8");
   return JSON.parse(data).dependencies["@qualified/embed"].replace("^", "");
 };
 
 const updateScriptTag = async (filePath, newVersion) => {
   const oldScriptTag =
-    /<script src="https:\/\/cdn\.jsdelivr\.net\/gh\/andela-technology\/qualified-embed@[^\/]+\/dist\/embed\.min\.js"><\/script>/g;
-  const newScriptTag = `<script src="https://cdn.jsdelivr.net/gh/andela-technology/qualified-embed@v${newVersion}/dist/embed.min.js"></script>`;
+    /<script src="https:\/\/cdn\.jsdelivr\.net\/npm\/@qualified\/embed@v?[^\"]+"><\/script>/g;
+  const newScriptTag = `<script src="https://cdn.jsdelivr.net/npm/@qualified/embed@v${newVersion}"></script>`;
 
   const fileContent = await fs.readFile(filePath, "utf8");
 
