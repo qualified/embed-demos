@@ -3,9 +3,15 @@
 For using Qualified Embed in an actual project, these steps won't be necessary. This procedure is for Qualified staff who need to update our GitHub pages deploy.
 
 ```
+npm run deploy
+```
+
+which does:
+
+```
 npm run build
 mv dist/index.html .
-# Manually edit the bundle links in index.html to point to dist/bundle.{js,css}
+sed -i 's|src="bundle.js"|src="dist/bundle.js"|; s|href="bundle.css"|href="dist/bundle.css"|' index.html
 git add dist index.html
 git commit -m "Update the React demo"
 git push

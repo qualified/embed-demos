@@ -4,7 +4,8 @@
   "description": "A simple demo of Qualified Embed with React",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "node deploy"
   },
   "author": "Qualified",
   "license": "ISC",
